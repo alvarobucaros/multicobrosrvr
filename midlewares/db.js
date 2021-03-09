@@ -7,7 +7,7 @@ db = new myConnection(mysql, {
     user: 'root',
     password: '',
     port: 3306,
-    database: 'multipay'
+    database: 'multicobro'
   },'single');
   
 module.exports = db

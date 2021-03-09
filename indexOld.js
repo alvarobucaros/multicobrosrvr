@@ -1,16 +1,13 @@
 const express = require('express');
 const path = require('path');
+const app = express();
 const bodyParser = require('body-parser'); 
 const favicon = require('serve-favicon');
+const db = require('./midlewares/db')
 const cors = require('cors');
 
-const app = express();
-
-//app.use(bodyParser.urlencoded({extended:true}));
-
 app.use(cors())
-const db = require('./midlewares/db')
-
+app.use(express.json);
 // importing routes
 const appRoutes = require('./routes/rutes');
 // settings
